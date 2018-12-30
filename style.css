@@ -1,0 +1,147 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-color: #363636;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: Nunito, sans-serif;
+  line-height: 1.5;
+}
+
+nav {
+  background-color: var(--main-color);
+  height: 60px;
+}
+
+.hero-text {
+  text-align: center;
+  color: var(--main-color);
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.sub-title {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+
+.hero {
+  background-color: #dec6a0;
+  min-height: 500px;
+  padding: 55px 20px;
+}
+
+
+img {
+  width: 100%;
+  border-radius: 4px;
+  object-fit: cover;
+  display: block;
+  position: relative;
+}
+
+.main-articles {
+  display: grid;
+  grid-gap: 20px;
+}
+
+
+.advert {
+  background-color: #fff;
+  padding: 8px 8px 40px;
+  text-align: ceneter;
+}
+
+.advert-text {
+  margin-top: 10px;
+  font-size: 15px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.7);
+  font-weight: bold;
+}
+
+code {
+  color: #4a4a4a;
+  background-color: #f5f5f5;
+  font-size: 12px;
+  display: inline-block;
+  padding: 2px;
+}
+
+.advert img {
+  margin-top: -15px;
+  box-shadow: 0 10px 40px 0 rgba(62, 57, 107, .2), 0 2px 9px 0 rgba(62, 57, 107, .2);
+  transition: 300ms ease-in;
+}
+
+.advert img:hover {
+  transform: translateY(-10px);
+}
+
+
+@media (min-width: 769px) {
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  .main-articles {
+    grid-template-areas: "main main main ."
+      "main main main advert"
+      "main main main advert"
+      "sub1 sub2 sub3 .";
+    grid-template-columns: 1fr 1fr 1fr 31.5%;
+  }
+
+  .main {
+    grid-area: main;
+  }
+
+  .advert {
+    grid-area: advert;
+  }
+
+  .sub1 {
+    grid-area: sub1;
+  }
+
+  .sub2 {
+    grid-area: sub2;
+  }
+
+  .sub3 {
+    grid-area: sub3;
+  }
+
+  .title {
+    font-size: 4.5rem;
+  }
+
+  .sub-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .container {
+    max-width: 1152px;
+  }
+}
